@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <style>
+
+        .field {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="title">Edit Product</h1>
+    <div class="notification is-info" th:if="${message}" th:text="${message}" style="display: block;"></div>
+
+    <form action="/editingProduct" method="post">
+        <input type="hidden" name="id" th:value="${product.id()}" />
+
+        <div class="columns is-multiline">
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">Product Name</label>
+                    <div class="control">
+                        <input type="text" class="input is-fullwidth" name="name" th:value="${product.name()}" placeholder="Enter Product Name" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">Category</label>
+                    <div class="control">
+                        <input type="text" class="input is-fullwidth" name="category" th:value="${product.category()}" placeholder="Enter Category" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">Description</label>
+                    <div class="control">
+                        <textarea class="textarea is-fullwidth" name="description" th:text="${product.description()}" placeholder="Enter Description" required></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">Price</label>
+                    <div class="control">
+                        <input type="number" step="0.01" class="input is-fullwidth" name="price" th:value="${product.price()}" placeholder="Enter Price" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">Quantity in Stock</label>
+                    <div class="control">
+                        <input type="number" class="input is-fullwidth" name="quantityInStock" th:value="${product.quantityInStock()}" placeholder="Enter Quantity" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">Manufacturer</label>
+                    <div class="control">
+                        <input type="text" class="input is-fullwidth" name="manufacturer" th:value="${product.manufacturer()}" placeholder="Enter Manufacturer" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">Age Group</label>
+                    <div class="control">
+                        <input type="text" class="input is-fullwidth" name="ageGroup" th:value="${product.ageGroup()}" placeholder="Enter Age Group" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">Image URL</label>
+                    <div class="control">
+                        <input type="text" class="input is-fullwidth" name="image" th:value="${product.image()}" placeholder="Enter Image URL" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">Material</label>
+                    <div class="control">
+                        <input type="text" class="input is-fullwidth" name="material" th:value="${product.material()}" placeholder="Enter Material" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">Barcode</label>
+                    <div class="control">
+                        <input type="text" class="input is-fullwidth" name="barcode" th:value="${product.barcode()}" placeholder="Enter Barcode" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <button type="submit" class="button is-primary">Edit Product</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

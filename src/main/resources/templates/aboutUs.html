@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Toy Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="notification is-info" th:if="${message}" th:text="${message}" style="display: block;"></div>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container">
+    <div th:replace="~{fragments/menu :: menuFragment('aboutus')}"></div>
+
+    <section class="section">
+        <h1 class="title">About Us</h1>
+        <p class="subtitle">Creating Joy and Imagination Through Play</p>
+
+        <div class="content">
+            <h2 class="title is-4">Our Mission</h2>
+            <p>At Toy Store, our mission is to provide high-quality toys that inspire creativity and promote learning through play. We believe that every child deserves to experience the joy of imaginative play, and we strive to offer a wide range of products that cater to different interests and age groups.</p>
+
+            <h2 class="title is-4">Our Story</h2>
+            <p>Founded in 2020 by a group of passionate parents and toy enthusiasts, Toy Store began as a small local shop with a big dream. Over the years, we have grown into a beloved destination for families seeking unique and educational toys. Our commitment to quality and customer service has helped us build lasting relationships with our community.</p>
+
+            <h2 class="title is-4">Our Values</h2>
+            <ul>
+                <li><strong>Quality:</strong> We carefully select every product to ensure it meets our high standards for safety and durability.</li>
+                <li><strong>Creativity:</strong> We encourage imaginative play and provide toys that stimulate creativity in children.</li>
+                <li><strong>Community:</strong> We believe in giving back and actively support local charities and schools.</li>
+                <li><strong>Sustainability:</strong> We are committed to environmentally friendly practices and offer eco-friendly product options.</li>
+            </ul>
+
+            <h2 class="title is-4">Meet Our Team</h2>
+            <div class="columns is-multiline">
+                <!-- Team Member 1 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://via.placeholder.com/400x300" alt="Team Member 1">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-5">Jane Doe</p>
+                            <p>Co-Founder & CEO</p>
+                            <p>Jane has over 15 years of experience in the toy industry and is passionate about creating engaging play experiences for children.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://via.placeholder.com/400x300" alt="Team Member 2">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-5">John Smith</p>
+                            <p>Marketing Director</p>
+                            <p>With a background in marketing and communications, John helps spread the word about our amazing products and community initiatives.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://via.placeholder.com/400x300" alt="Team Member 3">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <p class="title is-5">Emily Johnson</p>
+                            <p>Customer Service Manager</p>
+                            <p>Emily ensures that every customer has a positive experience at Toy Store, providing support and assistance whenever needed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p><strong>Toy Store</strong> © 2024. All rights reserved.</p>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

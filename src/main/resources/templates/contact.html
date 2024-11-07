@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Toy Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="notification is-info" th:if="${message}" th:text="${message}" style="display: block;"></div>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container">
+    <div th:replace="~{fragments/menu :: menuFragment('contact')}"></div>
+
+    <section class="section">
+        <h1 class="title">Contact Us</h1>
+        <p class="subtitle">We'd love to hear from you! Please fill out the form below.</p>
+
+        <div class="columns">
+            <!-- Contact Form -->
+            <div class="column is-two-thirds">
+                <form action="#" method="post">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input type="text" class="input" placeholder="Your Name" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input type="email" class="input" placeholder="Your Email" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Message</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Your Message" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="control">
+                        <button type="submit" class="button is-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <aside class="column is-one-third">
+                <h2 class="title is-4">Get in Touch</h2>
+                <p><strong>Email:</strong> support@toystore.com</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Address:</strong></p>
+                <p>123 Toy Lane<br>Playtown, PT 12345</p>
+
+                <!-- Social Media Links -->
+                <h2 class="title is-4">Follow Us</h2>
+                <a href="#" class="button is-link"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#" class="button is-link"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" class="button is-link"><i class="fab fa-instagram"></i> Instagram</a>
+            </aside>
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p><strong>Toy Store</strong> © 2024. All rights reserved.</p>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

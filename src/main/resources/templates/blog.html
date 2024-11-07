@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Store Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="notification is-info" th:if="${message}" th:text="${message}" style="display: block;"></div>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container">
+    <div th:replace="~{fragments/menu :: menuFragment('blog')}"></div>
+
+    <section class="section">
+        <h1 class="title">Welcome to the Toy Store Blog!</h1>
+        <p class="subtitle">Your go-to source for toy news, reviews, and parenting tips.</p>
+
+        <div class="columns">
+            <div class="column is-three-quarters">
+                <!-- Featured Articles Section -->
+                <h2 class="title is-4">Featured Articles</h2>
+                <article class="post">
+                    <h3 class="title is-5"><a href="#">Top 10 Educational Toys for Kids</a></h3>
+                    <p>Discover toys that not only entertain but also educate your little ones.</p>
+                    <p><small>Posted on October 29, 2024 by Author Name</small></p>
+                </article>
+                <article class="post">
+                    <h3 class="title is-5"><a href="#">DIY Toy Ideas for Creative Play</a></h3>
+                    <p>Get inspired with these fun and easy DIY toy projects you can do at home!</p>
+                    <p><small>Posted on October 22, 2024 by Author Name</small></p>
+                </article>
+                <article class="post">
+                    <h3 class="title is-5"><a href="#">The Importance of Play in Child Development</a></h3>
+                    <p>Learn how playtime contributes to your child's growth and learning.</p>
+                    <p><small>Posted on October 15, 2024 by Author Name</small></p>
+                </article>
+
+                <!-- Pagination -->
+                <nav class="pagination" role="navigation" aria-label="pagination">
+                    <a class="pagination-previous" href="#">Previous</a>
+                    <a class="pagination-next" href="#">Next</a>
+                </nav>
+            </div>
+
+            <!-- Sidebar Section -->
+            <aside class="column is-one-quarter">
+                <div class="box">
+                    <h2 class="title is-4">Categories</h2>
+                    <ul>
+                        <li><a href="#">Toy Reviews</a></li>
+                        <li><a href="#">Parenting Tips</a></li>
+                        <li><a href="#">DIY Projects</a></li>
+                        <li><a href="#">Seasonal Trends</a></li>
+                        <li><a href="#">Gift Guides</a></li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <h2 class="title is-4">Subscribe to Our Newsletter</h2>
+                    <form action="#" method="post">
+                        <div class="field">
+                            <label class="label">Email Address</label>
+                            <div class="control">
+                                <input type="email" class="input" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <button type="submit" class="button is-primary">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="box">
+                    <h2 class="title is-4">Follow Us</h2>
+                    <p>Stay connected with us on social media!</p>
+                    <a href="#" class="button is-link"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#" class="button is-link"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" class="button is-link"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+
+            </aside>
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p><strong>Toy Store Blog</strong> © 2024. All rights reserved.</p>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

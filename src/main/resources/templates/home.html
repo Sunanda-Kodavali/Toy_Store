@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toy Store Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="notification is-info" th:if="${message}" th:text="${message}" style="display: block;"></div>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<div class="container">
+    <div th:replace="~{fragments/menu :: menuFragment('home')}"></div>
+
+    <section class="section">
+        <h1 class="title">Welcome to Our Toy Store!</h1>
+        <p class="subtitle">Discover a world of fun and imagination</p>
+
+        <div class="columns is-multiline">
+            <div class="column is-one-third">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://placeholder.com/400x300" alt="Teddy Bear">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">Cuddly Teddy Bear</p>
+                        <p class="subtitle is-6">$19.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-one-third">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://placeholder.com/400x300" alt="LEGO Set">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">LEGO Adventure Set</p>
+                        <p class="subtitle is-6">$49.99</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-one-third">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://placeholder.com/400x300" alt="Remote Control Car">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <p class="title is-4">RC Speed Racer</p>
+                        <p class="subtitle is-6">$39.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content mt-6">
+            <h2 class="title is-4">About Our Store</h2>
+            <p>Welcome to our magical toy store! We offer a wide range of toys for children of all ages. From educational puzzles to exciting action figures, we have something for every young adventurer. Our mission is to bring joy and spark imagination in children through high-quality, safe, and fun toys.</p>
+            <a href="#" class="button is-primary">Explore Our Collection</a>
+        </div>
+    </section>
+</div>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Toy Store</strong> © 2024. All rights reserved.
+        </p>
+    </div>
+</footer>
+</body>
+</html>
